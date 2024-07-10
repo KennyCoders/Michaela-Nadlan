@@ -3087,6 +3087,94 @@ input, select, textarea {
   align-items: stretch; /* Stretch items to match heights */
   margin: 0 0 1em 0;
 }
+
+
+/***** Mobile ****/
+
+@media (max-width: 768px) {
+  .timeline {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #desktop-nav {
+    display: none;
+  }
+  #mobile-nav {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  #mobile-nav {
+    display: none;
+  }
+}
+
+#mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #333;
+}
+
+#mobile-menu a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  #one .image {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 2em 1em;
+  }
+
+  .inner {
+    width: 100%;
+  }
+
+  .features article {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+
+  #banner .inner {
+    padding: 2em 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  #footer .field {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+}
+
+
 /****************/
 .features article {
     flex: 1 1 100%;

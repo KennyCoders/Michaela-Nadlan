@@ -211,5 +211,11 @@ articles.forEach(article => {
   observer.observe(article);
 });
 
+// Mobile
+
+    document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+      var mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+    });
 
 })(jQuery);
