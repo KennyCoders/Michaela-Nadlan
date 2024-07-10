@@ -3174,6 +3174,22 @@ input, select, textarea {
   }
 }
 
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #one .content {
+    width: 95%;
+    padding: 0 1em;
+  }
+
+  #one .content p {
+    text-align: justify;
+  }
+}
 
 /****************/
 .features article {
