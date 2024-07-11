@@ -13,7 +13,7 @@ app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')  # Accessing MAIL_USERNAME environment variable
 app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')  # Accessing MAIL_PASSWORD environment variable
-
+app.config['MAIL_RECIPIENT'] = os.getenv('MAIL_RECIPIENT')
 
 mail = Mail(app)
 
@@ -28,7 +28,7 @@ def home():
 
         msg = Message('New Message from Your Website',
                       sender=os.getenv('MAIL_USERNAME'),
-                      recipients=[os.getenv('MAIL_USERNAME')])
+                      recipients=[os.getenv('MAIL_RECIPIENT')])
         msg.body = f"From: {name}\nEmail: {email}\nMessage: {message}"
 
         mail.send(msg)

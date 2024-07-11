@@ -3174,7 +3174,7 @@ input, select, textarea {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 980px) {
   .desktop-only {
     display: none;
   }
@@ -3190,6 +3190,9 @@ input, select, textarea {
     text-align: justify;
   }
 }
+
+
+
 
 /****************/
 .features article {
