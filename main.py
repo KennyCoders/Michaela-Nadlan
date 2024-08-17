@@ -23,7 +23,7 @@ def home():
     form = ContactForm()
     if form.validate_on_submit():
         name = form.name.data
-        email = form.email.data
+        email = form.email.dat
         message = form.message.data
 
         msg = Message('New Message from Your Website',

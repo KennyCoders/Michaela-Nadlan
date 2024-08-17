@@ -3191,7 +3191,42 @@ input, select, textarea {
   }
 }
 
+/********* HEADLINE *******/
 
+#banner .headline {
+    margin-top: -2.5em; /* Adjust this value to control the overlap amount */
+    padding-top: 0; /* Ensure no extra padding */
+}
+
+/* Style for the headline */
+.headline {
+    text-align: center;
+    color: white;
+    margin-top: 0px; /* Adjust the margin as needed */
+}
+
+/* Style for the main title */
+.headline h1 {
+    font-size: 72px; /* Adjust the size as needed */
+    font-weight: bold;
+    font-family: 'Assistant', sans-serif; /* Example font, replace if needed */
+    margin: 0;
+}
+
+/* Style for the subheading */
+.headline h3 {
+    font-size: 32px; /* Adjust the size as needed */
+    font-weight: normal;
+        font-family: 'Assistant', Helvetica, sans-serif; /* Example font, replace if needed */
+    margin: 5px 0 0;
+}
+
+/* Ensure the banner section has enough padding */
+#banner .inner {
+    padding: 5px; /* Adjust as needed */
+}
+
+/********* HEADLINE *******/
 
 
 /****************/
@@ -3292,9 +3327,174 @@ input, select, textarea {
 }
 
 
+/* Unique styles for the #five section */
+
+/* Section 5 Features */
+.section-five-features {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 0 2em 0;
+}
+
+    .section-five-features article {
+        padding: 1em; /* Reduce padding for a smaller box */
+        background-color: #353849;
+        border-radius: 5px;
+        margin: 1em; /* Space between boxes */
+        width: calc(25% - 2em); /* Fit 4 boxes per row */
+        box-sizing: border-box; /* Ensure padding and border are included in the width */
+    }
+
+        .section-five-features article .image {
+            border-radius: 5px 5px 0 0;
+            display: block;
+            margin-bottom: 1em;
+            position: relative;
+            width: 100%;
+        }
+
+            .section-five-features article .image img {
+                border-radius: 5px 5px 0 0;
+                width: 100%;
+            }
+
+        .section-five-features h3.major {
+            font-size: 1em; /* Smaller font size for the heading */
+        }
+
+        .section-five-features p {
+            font-size: 0.875em; /* Smaller font size for paragraph text */
+        }
+
+    @media screen and (max-width: 980px) {
+        .section-five-features article {
+            margin: 0.75em;
+            width: calc(50% - 1.5em); /* Two per row on medium screens */
+        }
+    }
+
+    @media screen and (max-width: 736px) {
+        .section-five-features article {
+            padding: 0.75em; /* Further reduce padding */
+            margin: 0.75em;
+            width: calc(50% - 1.5em); /* Two per row on small screens */
+        }
+
+        .section-five-features article .image {
+            margin-bottom: 0.75em;
+        }
+
+        .section-five-features h3.major {
+            font-size: 0.875em; /* Smaller font size for small screens */
+        }
+
+        .section-five-features p {
+            font-size: 0.75em; /* Smaller font size for small screens */
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .section-five-features {
+            display: block;
+        }
+
+        .section-five-features article {
+            width: 100%;
+            margin: 0 0 2em 0 !important;
+        }
+
+        .section-five-features h3.major {
+            font-size: 0.75em; /* Further reduce font size for very small screens */
+        }
+
+        .section-five-features p {
+            font-size: 0.625em; /* Further reduce font size for very small screens */
+        }
+    }
 
 
+/* Style for the article paragraph */
+.section-five-features p {
+    margin: 0;
+    font-size: 0.875em; /* Adjust font size if needed */
+}
 
+.section-five-features .name {
+    display: block;
+    font-weight: bold; /* Make the name stand out */
+    margin-bottom: 0.5em; /* Space between the name and the list */
+}
+
+.section-five-features .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section-five-features .contact-list li {
+    font-size: 0.875em; /* Adjust font size if needed */
+    margin-bottom: 0.5em; /* Space between list items */
+    display: flex;
+    align-items: center;
+}
+
+.section-five-features .contact-list li .icon {
+    margin-right: 0.5em; /* Space between icon and text */
+    font-size: 1.25em; /* Adjust icon size if needed */
+}
+
+/* Ensure the link styles are consistent with the rest of your site */
+.section-five-features .contact-list li a {
+    color: inherit; /* Use the same color as surrounding text */
+    text-decoration: none;
+}
+
+.section-five-features .contact-list li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Style for contact list */
+
+/* Style for contact-info paragraphs */
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin: 0.5em 0; /* Adjust margin as needed */
+    font-size: 1em; /* Adjust font size as needed */
+}
+
+/* Style for icons */
+.contact-info .icon {
+  /* Space between icon and text */
+    margin-left: 0.5em; /* Increase space between icon and text */
+    font-size: 1.2em; /* Adjust icon size as needed */
+}
+
+/* Style for text next to icons */
+.contact-info .text {
+    color: #ffffff; /* Text color, adjust as needed */
+}
+
+/* Optional: Style for links within text */
+.contact-info .text a {
+    color: inherit; /* Ensure link color matches the text color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+
+/* Ensure images in the .section-five-features are sized correctly */
+.section-five-features .image img {
+    width: 155px;
+    height: 100px;
+    object-fit: cover; /* Ensures the image covers the dimensions without stretching */
+}
 
 /* Header */
 
@@ -3622,7 +3822,7 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
-		padding: 10em 0 4.75em 0 ;
+		padding: 6em 0 4.75em 0 ;
 		text-align: center;
 	}
 
@@ -3642,7 +3842,7 @@ input, select, textarea {
 			-ms-transform: translateY(0);
 			transform: translateY(0);
 			opacity: 1;
-			margin: 0 0 1.3em 0;
+			margin: 0 0 0em 0;
 		}
 
 			#banner .logo .icon {
