@@ -3091,38 +3091,6 @@ input, select, textarea {
 
 /***** Mobile ****/
 
-@media (max-width: 768px) {
-  .timeline {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  #desktop-nav {
-    display: none;
-  }
-  #mobile-nav {
-    display: block;
-  }
-}
-
-@media (min-width: 769px) {
-  #mobile-nav {
-    display: none;
-  }
-}
-
-#mobile-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background-color: #333;
-}
-
-/* Style the mobile menu container */
-
 /* Style the mobile menu container */
 #mobile-menu {
   display: none; /* Hide by default */
@@ -3132,6 +3100,8 @@ input, select, textarea {
   right: 0;
   background-color: #333; /* Background color for the menu */
   z-index: 1000; /* Ensure it appears above other content */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 /* Style for the mobile menu links */
@@ -3148,74 +3118,46 @@ input, select, textarea {
 
 /* Style for the hamburger menu toggle button */
 #mobile-menu-toggle {
-  width: 50px; /* Adjust width */
-  height: 50px; /* Adjust height to keep it proportional */
-  font-size: 30px; /* Adjust font size if needed */
-  background: none; /* Remove background */
-  border: none; /* Remove border */
-  color: white; /* Text color */
-  cursor: pointer; /* Pointer cursor for better UX */
-  display: inline-block; /* Inline-block to align with other elements */
-  padding: 10px; /* Increase padding around the icon */
-  text-align: center; /* Center the icon inside the button */
-  line-height: 30px; /* Adjust line height to vertically center the icon */
-  z-index: 1000; /* Ensure it appears above other content */
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  line-height: 30px;
+  z-index: 1000;
 }
 
-/* Hide elements and adjust styles for mobile devices with a max width of 768px */
+/* Show the mobile menu when the .show class is added */
+#mobile-menu.show {
+  display: block;
+  opacity: 1;
+}
+
+/* Media queries */
 @media (max-width: 768px) {
-  #one .image {
-    display: none; /* Hide image in #one section */
+  #desktop-nav {
+    display: none;
   }
-
-  .wrapper {
-    padding: 2em 1em; /* Adjust padding */
+  #mobile-nav {
+    display: block;
   }
+}
 
-  .inner {
-    width: 100%; /* Full width for inner elements */
-  }
-
-  .features article {
-    width: 100%; /* Full width for articles in features section */
-    margin-bottom: 2em; /* Margin bottom for spacing */
-  }
-
-  #banner .inner {
-    padding: 2em 1em; /* Adjust padding in banner */
-  }
-
-  #footer .field {
-    width: 100%; /* Full width for fields in footer */
-    margin-left: 0; /* Remove left margin */
-  }
-
-  body {
-    font-size: 14px; /* Adjust body font size */
-  }
-
-  h2 {
-    font-size: 1.5em; /* Adjust font size for h2 elements */
-  }
-
-  p {
-    line-height: 1.6; /* Adjust line height for paragraphs */
-  }
-
-  #one .content {
-    width: 95%; /* Adjust width for content in #one section */
-    padding: 0 1em; /* Adjust padding */
-  }
-
-  #one .content p {
-    text-align: justify; /* Justify text alignment */
+@media (min-width: 769px) {
+  #mobile-nav {
+    display: none;
   }
 }
 
 /* Hide desktop-only elements for devices with a max width of 980px */
 @media (max-width: 980px) {
   .desktop-only {
-    display: none; /* Hide elements with desktop-only class */
+    display: none;
   }
 }
 /********* HEADLINE *******/
