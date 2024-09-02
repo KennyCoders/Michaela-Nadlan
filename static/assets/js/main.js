@@ -38,32 +38,45 @@
 
 	// Menu.
 		var $menu = $('#menu');
+
 		$menu._locked = false;
+
 		$menu._lock = function() {
+
 			if ($menu._locked)
 				return false;
+
 			$menu._locked = true;
+
 			window.setTimeout(function() {
 				$menu._locked = false;
 			}, 350);
+
 			return true;
+
 		};
 
 		$menu._show = function() {
+
 			if ($menu._lock())
 				$body.addClass('is-menu-visible');
+
 		};
 
 		$menu._hide = function() {
+
 			if ($menu._lock())
 				$body.removeClass('is-menu-visible');
+
 		};
 
 		$menu._toggle = function() {
+
 			if ($menu._lock())
 				$body.toggleClass('is-menu-visible');
 
 		};
+
 		$menu
 			.appendTo($body)
 			.on('click', function(event) {
@@ -123,9 +136,8 @@
 
 			});
 
-
-
-// Progress Bar
+			// Progress Bar
+			// Progress Bar
     function updateTimeline() {
   const timeline = document.querySelector('.timeline');
   const articles = document.querySelectorAll('.article-container');
@@ -201,12 +213,9 @@ articles.forEach(article => {
 
 // Mobile
 
-        // Mobile menu toggle button
     document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
-        var mobileMenu = document.getElementById('mobile-menu');
-        var isVisible = mobileMenu.style.display === 'block';
-        mobileMenu.style.display = isVisible ? 'none' : 'block';
+      var mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
     });
-
 
 })(jQuery);
