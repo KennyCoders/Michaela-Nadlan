@@ -3121,76 +3121,103 @@ input, select, textarea {
   background-color: #333;
 }
 
-#mobile-menu a {
-  display: block;
-  padding: 10px;
-  color: white;
-  text-decoration: none;
+/* Style the mobile menu container */
+
+/* Style the mobile menu container */
+#mobile-menu {
+  display: none; /* Hide by default */
+  position: absolute;
+  top: 60px; /* Position below the hamburger menu */
+  left: 0;
+  right: 0;
+  background-color: #333; /* Background color for the menu */
+  z-index: 1000; /* Ensure it appears above other content */
 }
 
+/* Style for the mobile menu links */
+#mobile-menu a {
+  display: block; /* Full-width clickable area */
+  padding: 10px;
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underline */
+}
+
+#mobile-menu a:hover {
+  background-color: #555; /* Background color on hover */
+}
+
+/* Style for the hamburger menu toggle button */
+#mobile-menu-toggle {
+  width: 50px; /* Adjust width */
+  height: 50px; /* Adjust height to keep it proportional */
+  font-size: 30px; /* Adjust font size if needed */
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  color: white; /* Text color */
+  cursor: pointer; /* Pointer cursor for better UX */
+  display: inline-block; /* Inline-block to align with other elements */
+  padding: 10px; /* Increase padding around the icon */
+  text-align: center; /* Center the icon inside the button */
+  line-height: 30px; /* Adjust line height to vertically center the icon */
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* Hide elements and adjust styles for mobile devices with a max width of 768px */
 @media (max-width: 768px) {
   #one .image {
-    display: none;
+    display: none; /* Hide image in #one section */
   }
-}
 
-@media (max-width: 768px) {
   .wrapper {
-    padding: 2em 1em;
+    padding: 2em 1em; /* Adjust padding */
   }
 
   .inner {
-    width: 100%;
+    width: 100%; /* Full width for inner elements */
   }
 
   .features article {
-    width: 100%;
-    margin-bottom: 2em;
+    width: 100%; /* Full width for articles in features section */
+    margin-bottom: 2em; /* Margin bottom for spacing */
   }
 
   #banner .inner {
-    padding: 2em 1em;
+    padding: 2em 1em; /* Adjust padding in banner */
   }
-}
 
-@media (max-width: 768px) {
   #footer .field {
-    width: 100%;
-    margin-left: 0;
+    width: 100%; /* Full width for fields in footer */
+    margin-left: 0; /* Remove left margin */
   }
-}
 
-@media (max-width: 768px) {
   body {
-    font-size: 14px;
+    font-size: 14px; /* Adjust body font size */
   }
 
   h2 {
-    font-size: 1.5em;
+    font-size: 1.5em; /* Adjust font size for h2 elements */
   }
 
   p {
-    line-height: 1.6;
+    line-height: 1.6; /* Adjust line height for paragraphs */
   }
-}
 
-@media (max-width: 980px) {
-  .desktop-only {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
   #one .content {
-    width: 95%;
-    padding: 0 1em;
+    width: 95%; /* Adjust width for content in #one section */
+    padding: 0 1em; /* Adjust padding */
   }
 
   #one .content p {
-    text-align: justify;
+    text-align: justify; /* Justify text alignment */
   }
 }
 
+/* Hide desktop-only elements for devices with a max width of 980px */
+@media (max-width: 980px) {
+  .desktop-only {
+    display: none; /* Hide elements with desktop-only class */
+  }
+}
 /********* HEADLINE *******/
 
 #banner .headline {

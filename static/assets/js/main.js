@@ -213,9 +213,17 @@ articles.forEach(article => {
 
 // Mobile
 
+        // Mobile menu toggle button
     document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
       var mobileMenu = document.getElementById('mobile-menu');
       mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
     });
+
+    // Close menu when an item is clicked
+    document.querySelectorAll('#mobile-menu a').forEach(function(menuItem) {
+      menuItem.addEventListener('click', function() {
+        var mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.style.display = 'none';
+      });
 
 })(jQuery);
