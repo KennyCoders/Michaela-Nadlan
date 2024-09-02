@@ -213,9 +213,30 @@ articles.forEach(article => {
 
 // Mobile
 
-    document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
-      var mobileMenu = document.getElementById('mobile-menu');
-      mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+      var $mobileMenuToggle = $('#mobile-menu-toggle');
+    var $mobileMenu = $('#mobile-menu');
+
+    $mobileMenuToggle.on('click', function() {
+        $mobileMenu.slideToggle(300);
     });
+
+    // Close mobile menu when a menu item is clicked
+    $mobileMenu.find('a').on('click', function() {
+        $mobileMenu.slideUp(300);
+    });
+
+    // Close mobile menu when clicking outside
+    $(document).on('click', function(event) {
+        if (!$(event.target).closest('#mobile-menu, #mobile-menu-toggle').length) {
+            $mobileMenu.slideUp(300);
+        }
+    });
+
+    // Prevent the mobile menu from closing when clicking inside it
+    $mobileMenu.on('click', function(event) {
+        event.stopPropagation();
+    });
+
+
 
 })(jQuery);
