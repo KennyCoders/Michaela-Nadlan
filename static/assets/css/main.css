@@ -3487,7 +3487,7 @@ input, select, textarea {
 /* Style for description text (less bold, smaller font) */
 .contact-info.description-text .text {
     font-weight: normal; /* Less bold */
-    font-size: 0.7em; /* Match the font size */
+    font-size: 0.9em; /* Match the font size */
 }
 
 /* Optional: Style for links within text */
